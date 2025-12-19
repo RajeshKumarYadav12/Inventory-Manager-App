@@ -68,59 +68,6 @@ The Inventory Management System centralizes inventory data and provides:
 - **Backend:** Render
 - **Database:** MongoDB Atlas
 
----
-
-## 📁 Project Structure
-
-inventory-management/
-├── frontend/
-│ ├── app/
-│ │ ├── page.js # Dashboard
-│ │ ├── inventory/ # Inventory list & edit
-│ │ ├── add-product/ # Add new product
-│ │ └── alerts/ # Low stock alerts
-│ ├── components/
-│ │ ├── Navbar.jsx
-│ │ ├── ProductTable.jsx
-│ │ ├── AddProductForm.jsx
-│ │ ├── StockUpdateModal.jsx
-│ │ └── StatsCard.jsx
-│ └── lib/
-│ ├── api.js
-│ └── utils.js
-│
-├── backend/
-│ └── src/
-│ ├── models/Product.js
-│ ├── routes/products.js
-│ ├── routes/alerts.js
-│ ├── middleware/errorHandler.js
-│ └── server.js
-└── README.md
-
-yaml
-Copy code
-
----
-
-## 🧱 Database Schema
-
-### Product Model
-```js
-{
-  name: String,
-  sku: String (unique),
-  category: String,
-  unit: String,
-  currentStock: Number,
-  minStockLevel: Number,
-  isActive: Boolean,
-  createdAt: Date,
-  updatedAt: Date
-}
-Includes a virtual field isLowStock
-
-Soft deletion using isActive
 
 🌐 API Endpoints
 Products
@@ -136,6 +83,7 @@ Alerts
 bash
 Copy code
 GET    /api/alerts/low-stock
+
 ⚙️ Setup Instructions
 Backend Setup
 bash
@@ -159,8 +107,8 @@ Copy code
 cd frontend
 npm install
 Create .env.local:
-
 env
+
 Copy code
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 Run frontend:
@@ -168,14 +116,17 @@ Run frontend:
 bash
 Copy code
 npm run dev
-🚀 Live Demo
+
+
+Live Demo
 Frontend: https://inventory-manager-app-omega.vercel.app/
 
 Backend API: https://inventory-manager-app-e50w.onrender.com/
 
 (Replace with actual deployed links)
 
-📌 Assumptions (POC Scope)
+
+Assumptions (POC Scope)
 Single inventory location
 
 Manual stock updates
@@ -183,6 +134,8 @@ Manual stock updates
 No authentication (POC only)
 
 Internet connectivity available
+
+
 
 🔮 Future Enhancements
 Multi-location inventory support
@@ -197,7 +150,8 @@ Inventory analytics & forecasting
 
 Role-based access control
 
-🧠 Key Learnings
+
+Key Learnings
 Designing tech solutions for real business problems
 
 Building scalable backend APIs
@@ -206,6 +160,9 @@ Managing inventory edge cases (negative stock, alerts)
 
 Clean UI/UX for operational tools
 
+
+
 👤 Author
 Rajesh Kumar Yadav
 Final Year B.Tech (CSE), IIIT Manipur
+
