@@ -151,7 +151,7 @@ Inventory analytics & forecasting
 Role-based access control
 
 
-Key Learnings
+🧠 Key Learnings
 Designing tech solutions for real business problems
 
 Building scalable backend APIs
@@ -163,6 +163,8 @@ Clean UI/UX for operational tools
 
 
 👤 Author
+
 Rajesh Kumar Yadav
+
 Final Year B.Tech (CSE), IIIT Manipur
 
