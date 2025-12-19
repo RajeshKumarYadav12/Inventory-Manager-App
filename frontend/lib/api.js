@@ -24,7 +24,10 @@ async function fetchAPI(endpoint, options = {}) {
 
 // Product APIs
 export const getProducts = async (category = "") => {
-  const query = category ? `?category=${category}` : "";
+  const params = new URLSearchParams();
+  if (category) params.append("category", category);
+  params.append("isActive", "true");
+  const query = params.toString() ? `?${params.toString()}` : "";
   return fetchAPI(`/api/products${query}`);
 };
 
